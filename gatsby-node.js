@@ -1,7 +1,43 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions
+
+  const postTemplate = path.resolve("src/templates/blog-post.js")
+
+  return graphql(`
+    {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            html
+            id
+            frontmatter {
+              date
+              title
+              spoiler
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then(res => {
+    const posts = res.data.allMarkdownRemark.edges
+
+    if (res.errors) {
+      return Promise.reject(res.errors)
+    }
+
+    posts.forEach(({ node }, index) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: postTemplate,
+        context: {
+          prev: index === 0 ? null : posts[index - 1].node,
+          next: index === posts.length - 1 ? null : posts[index + 1].node,
+        },
+      })
+    })
+  })
+}
