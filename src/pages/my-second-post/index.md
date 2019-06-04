@@ -1,8 +1,8 @@
 ---
-path: "/post-two"
+path: "/a-guide-to-learning-web-development"
 date: 2019-06-02T20:15:00
-title: "My Second Gatsby Post"
-spoiler: "Don't click this is for test 2"
+title: "How to learn Web Development?"
+spoiler: "TL;DR doesn't works well with sloth."
 ---
 
 This is my very first blog post in Gatsby

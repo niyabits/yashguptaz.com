@@ -1,8 +1,8 @@
 ---
 path: "/post-one"
 date: 2019-06-02
-title: "My First Gatsby Post"
-spoiler: "Don't click this is for test 1"
+title: "How this blog came to be what it is."
+spoiler: "The story of a blog."
 ---
 
 This is my very first blog post in Gatsby

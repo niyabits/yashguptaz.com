@@ -10,29 +10,17 @@ const IndexPage = ({ data }) => (
   <div className="blog-page">
     <Layout>
       <SEO title="Home" />
-      <div className="blog-info">
-        <p>
-          Personal Blog by{" "}
-          <a
-            href="https://twitter.com/yashguptaz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Yash Gupta
-          </a>
-          . <br />
-          Not your next door front-end Web Dev.
-        </p>
+      <div className="main-card">
+        {data.allMarkdownRemark.edges.map(post => (
+          <div key={post.node.id} className="post">
+            <Link to={post.node.frontmatter.path}>
+              <h3>{post.node.frontmatter.title}</h3>
+            </Link>
+            <small>{post.node.frontmatter.date}</small>
+            <p>{post.node.frontmatter.spoiler}</p>
+          </div>
+        ))}
       </div>
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id} className="post">
-          <Link to={post.node.frontmatter.path}>
-            <h3>{post.node.frontmatter.title}</h3>
-          </Link>
-          <small>{post.node.frontmatter.date}</small>
-          <p>{post.node.frontmatter.spoiler}</p>
-        </div>
-      ))}
     </Layout>
   </div>
 )

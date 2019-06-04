@@ -1,38 +1,100 @@
-@import url("https://fonts.googleapis.com/css?family=Google+Sans:500&lang=en");
+@import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500&lang=en");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap");
+:root {
+  --cool-grey-10: hsl(210, 24%, 16%);
+  --cool-grey-9: hsl(209, 20%, 25%);
+  --cool-grey-8: hsl(209, 18%, 30%);
+  --cool-grey-7: hsl(209, 14%, 37%);
+  --cool-grey-6: hsl(211, 12%, 43%);
+  --cool-grey-5: hsl(211, 10%, 53%);
+  --cool-grey-4: hsl(211, 13%, 65%);
+  --cool-grey-3: hsl(210, 16%, 82%);
+  --cool-grey-2: hsl(214, 15%, 91%);
+  --cool-grey-1: hsl(216, 33%, 97%);
+  --light-blue-7: hsl(201, 79%, 46%);
+  --light-blue-1: hsl(195, 100%, 95%);
+}
 
-* {
-  box-sizing: border-box;
+body {
+  font-family: "Google Sans", sans-serif;
+  background-color: var(--cool-grey-1);
+}
+/* 
+* HEADER
+*/
+header p {
+  color: var(--cool-grey-5) !important;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* 
 * BLOG PAGE
 */
 
-.blog-page .blog-info {
-  margin: 48px 0 64px 0;
-  font-family: "Google Sans", sans-serif;
+.main-card {
+  margin: 48px 8px;
+  padding: 64px 24px 32px;
+  border-radius: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.1);
+  max-width: 672px;
 }
 
 .blog-page .post {
   margin-bottom: 64px;
-  font-family: "Roboto", sans-serif;
 }
 
 .blog-page h3 {
   margin-bottom: 8px;
+  color: var(--cool-grey-8);
 }
 
 .blog-page p {
-  margin-top: 18px;
+  margin-top: 12px;
   font-family: "Google Sans", sans-serif;
+  color: var(--cool-grey-7);
 }
 
 .blog-page small {
-  color: hsl(0, 0%, 40%);
+  color: var(--cool-grey-4);
 }
 
 .blog-page a {
   color: #000;
   text-decoration: none;
+}
+
+/* 
+*Footer 
+*/
+
+footer {
+  margin: 64px 0 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cool-grey-6);
+}
+
+footer a {
+  color: var(--cool-grey-6) !important;
+}
+
+footer img {
+  margin: 8px;
+}
+
+#insta {
+  position: relative;
+  top: 8px;
+  left: -8px;
 }

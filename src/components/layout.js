@@ -29,16 +29,60 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
+            maxWidth: 672,
+            padding: `0 0`,
             paddingTop: 0,
           }}
         >
           <main>{children}</main>
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <div>
+              © {new Date().getFullYear()},{` `}
+              <a
+                href="https://github.com/yashguptaz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Yash Gupta
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://github.com/yashguptaz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={require("../images/github.svg")}
+                  width="25px"
+                  alt="github logo"
+                />
+              </a>
+              <a
+                href="https://instagram.com/yashguptaz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={require("../images/insta.svg")}
+                  width="25px"
+                  alt="instagram logo"
+                />
+              </a>
+              <a
+                href="https://twitter.com/yashguptaz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span id="insta">
+                  <img
+                    src={require("../images/twitter.svg")}
+                    width="40px"
+                    alt="twitter logo"
+                  />
+                </span>
+              </a>
+            </div>
           </footer>
         </div>
       </>
