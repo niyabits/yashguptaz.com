@@ -16,7 +16,12 @@ const IndexPage = ({ data }) => (
             <Link to={post.node.frontmatter.path}>
               <h3>{post.node.frontmatter.title}</h3>
             </Link>
-            <small>{post.node.frontmatter.date}</small>
+            <small>
+              {post.node.frontmatter.date} •{" "}
+              <span className="reading-time">
+                {post.node.fields.readingTime.text}
+              </span>
+            </small>
             <p>{post.node.frontmatter.spoiler}</p>
           </div>
         ))}
@@ -31,6 +36,11 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          fields {
+            readingTime {
+              text
+            }
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

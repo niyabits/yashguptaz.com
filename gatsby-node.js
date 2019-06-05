@@ -12,6 +12,11 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             html
             id
+            fields {
+              readingTime {
+                text
+              }
+            }
             frontmatter {
               date
               title

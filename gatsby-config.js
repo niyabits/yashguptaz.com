@@ -13,8 +13,42 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              maxWidth: 768,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: "÷",
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 768,
+            },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
+          },
+          "gatsby-remark-copy-linked-files",
+          `gatsby-remark-reading-time`,
+        ],
+      },
+    },
+
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-catch-links`,
     {

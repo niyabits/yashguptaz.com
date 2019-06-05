@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import "../components/global.css"
+import Footer from "./footer"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -36,55 +37,7 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            <div>
-              © {new Date().getFullYear()},{` `}
-              <a
-                href="https://github.com/yashguptaz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Yash Gupta
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://github.com/yashguptaz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={require("../images/github.svg")}
-                  width="25px"
-                  alt="github logo"
-                />
-              </a>
-              <a
-                href="https://instagram.com/yashguptaz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={require("../images/insta.svg")}
-                  width="25px"
-                  alt="instagram logo"
-                />
-              </a>
-              <a
-                href="https://twitter.com/yashguptaz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span id="insta">
-                  <img
-                    src={require("../images/twitter.svg")}
-                    width="40px"
-                    alt="twitter logo"
-                  />
-                </span>
-              </a>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </>
     )}
