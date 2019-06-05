@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import "../components/global.css"
 import PostHeader from "../components/post-header"
 import Footer from "../components/footer"
+import SEO from "../components/seo"
 
 export default function Template({ data, pageContext }) {
   const post = data.markdownRemark
@@ -11,6 +12,7 @@ export default function Template({ data, pageContext }) {
 
   return (
     <div>
+      <SEO title={post.frontmatter.title} />
       <PostHeader />
       <div
         style={{
@@ -24,7 +26,9 @@ export default function Template({ data, pageContext }) {
           <br />
           <br />
           <h1>{post.frontmatter.title}</h1>
-          <small>{post.frontmatter.date}</small>
+          <small>
+            {post.frontmatter.date} • {post.fields.readingTime.text}
+          </small>
           <div
             dangerouslySetInnerHTML={{ __html: post.html }}
             className="blog-content"
@@ -44,6 +48,11 @@ export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

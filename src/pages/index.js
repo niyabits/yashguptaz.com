@@ -9,7 +9,7 @@ import "../components/global.css"
 const IndexPage = ({ data }) => (
   <div className="blog-page">
     <Layout>
-      <SEO title="Home" />
+      <SEO title="A Blog by Yash Gupta" />
       <div className="main-card">
         {data.allMarkdownRemark.edges.map(post => (
           <div key={post.node.id} className="post">
