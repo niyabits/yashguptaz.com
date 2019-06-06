@@ -10,7 +10,6 @@ exports.createPages = ({ actions, graphql }) => {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
-            html
             id
             fields {
               readingTime {
