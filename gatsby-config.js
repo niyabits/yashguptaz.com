@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Yash Gupta`,
     description: `Personal Blog by Yash Gupta`,
-    author: `@gatsbyjs`,
+    author: `@yashguptaz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -54,13 +54,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Personal Blog by Yash Gupta`,
+        short_name: `Yash Gupta`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#035388`,
+        theme_color: `#2BB0ED`,
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
