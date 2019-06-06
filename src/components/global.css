@@ -13,6 +13,7 @@
   --cool-grey-2: hsl(214, 15%, 91%);
   --cool-grey-1: hsl(216, 33%, 97%);
   --light-blue-7: hsl(201, 79%, 46%);
+  --light-blue-6: hsl(199, 84%, 55%);
   --light-blue-1: hsl(195, 100%, 95%);
 }
 
@@ -22,6 +23,12 @@ body {
 /* 
 * HEADER
 */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(209, 20%, 25%);
+}
+
 header p {
   color: var(--cool-grey-5) !important;
   font-weight: 500;
@@ -247,6 +254,10 @@ td {
   .blog-template p,
   li {
     font-size: 1rem !important;
+  }
+
+  .blog-template code {
+    font-size: 0.8rem !important;
   }
 
   .blog-template > a {

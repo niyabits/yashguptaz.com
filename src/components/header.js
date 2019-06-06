@@ -4,13 +4,7 @@ import React from "react"
 import "../components/global.css"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      display: `flex`,
-      justifyContent: `center`,
-      backgroundColor: `hsl(209, 20%, 25%)`,
-    }}
-  >
+  <header>
     <div
       style={{
         padding: `32px 24px`,

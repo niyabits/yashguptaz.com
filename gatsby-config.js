@@ -58,7 +58,7 @@ module.exports = {
         short_name: `Yash Gupta`,
         start_url: `/`,
         background_color: `#035388`,
-        theme_color: `#2BB0ED`,
+        theme_color: `#323F4B`,
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
