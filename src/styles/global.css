@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Tajawal";
+  font-style: regular;
+  font-weight: 400;
+  src: url("../fonts/Tajawal-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Tajawal";
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/Tajawal-Medium.ttf");
+}
+
+body {
+  font-family: "Tajawal", sans-serif !important;
+  background-color: hsl(240, 20%, 99%);
+}
+
+#nav-container {
+  width: 600px;
+  padding: 36px 24px;
+  margin: auto;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Tajawal", sans-serif;
+}
+
+#nav a {
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  color: hsl(209, 14%, 35%);
+}
+
+#nav a:hover {
+  color: hsl(209, 14%, 25%);
+}
+
+#main-title {
+  font-size: 4rem;
+  color: hsl(209, 14%, 35%);
+  margin-top: 36px;
+}
+
+#main-lead {
+  font-size: 16px;
+  color: hsl(209, 14%, 45%);
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  height: 80vh;
+}
+
+#sm {
+  display: flex;
+  justify-content: center;
+}
+
+#sm a {
+  margin: 0 12px;
+}
+
+.form-input-large,
+textarea {
+  background-color: hsl(240, 20%, 99%);
+  padding: 12px 0 3px 0;
+  border: 0;
+  border-bottom: 2px solid hsl(0, 0%, 95%);
+  width: 500px;
+  margin: 3px;
+  transition: ease-in-out 0.3s;
+}
+
+.form-input-large:focus {
+  border-bottom: 2px solid hsl(243, 75%, 70%);
+  transition: ease-in-out 0.3s;
+}
+
+#contactForm label {
+  color: hsl(0, 0%, 45%);
+  font-size: 0.9rem;
+  position: relative;
+  top: 6px;
+}
+
+#contactForm p {
+  margin-bottom: 30px;
+}
+
+#contactForm textarea {
+  height: 180px;
+  border: 2px solid hsl(0, 0%, 95%);
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 12px;
+  position: relative;
+  right: 12px;
+  width: 512px;
+  transition: ease-in-out 0.3s;
+}
+
+#contactForm textarea:focus {
+  border: 2px solid hsl(243, 75%, 70%);
+  transition: ease-in-out 0.3s;
+}
+
+.contact-btn {
+  width: 500px;
+}
+
+.contact-btn button {
+  margin-top: 18px;
+  margin-bottom: 72px;
+  margin-left: 412px;
+  background-color: #6c63ff;
+  border: 0;
+  color: white;
+  padding: 6px 18px;
+  border-radius: 6px;
+}
+
+#talk-container {
+  margin-bottom: 5rem;
+}
+
+#talk-container h1 {
+  color: hsl(209, 14%, 35%);
+  margin-bottom: 3rem;
+}
+
+.talk {
+  width: 110%;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.1);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid hsla(0, 0%, 50%, 0.1);
+  background-color: #fff;
+}
+
+.talk h2 {
+  color: hsl(209, 14%, 45%);
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.talk h3 {
+  color: hsl(209, 14%, 50%);
+  font-weight: 400;
+  margin-bottom: 36px;
+  font-size: 1.3rem;
+}
+.talk-info {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(209, 14%, 50%);
+}
+
+.talk-info span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.talk .website a {
+  color: #3e34ff;
+  text-decoration: none;
+}
+
+.talk .website a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+  #nav-container {
+    width: 300px;
+    padding: 24px 6px;
+  }
+
+  #nav a {
+    font-size: 1rem;
+  }
+
+  #main-title {
+    font-size: 3rem;
+  }
+
+  #main-lead {
+    font-size: 12px;
+    margin-top: -30px;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    height: 80vh;
+  }
+
+  .talk {
+    width: 100%;
+    padding-bottom: 48px;
+  }
+
+  .talk-info {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .talk-info span {
+    justify-content: flex-start;
+    margin-bottom: -8px;
+  }
+
+  .website {
+    position: relative;
+    top: 24px;
+  }
+
+  #contactForm .form-input-large {
+    width: 100%;
+  }
+
+  #contactForm textarea {
+    width: 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+
+  .contact-btn button {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
