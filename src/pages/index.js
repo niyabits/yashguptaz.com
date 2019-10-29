@@ -1,56 +1,29 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import githubDev from "../images/github-developer.svg"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
-import { graphql } from "gatsby"
-import "../components/global.css"
 
-const IndexPage = ({ data }) => (
-  <div className="blog-page">
-    <Layout>
-      <SEO title="A Blog by Yash Gupta" />
-      <div className="main-card">
-        {data.allMarkdownRemark.edges.map(post => (
-          <div key={post.node.id} className="post">
-            <Link to={post.node.frontmatter.path}>
-              <h3>{post.node.frontmatter.title}</h3>
-            </Link>
-            <small>
-              {post.node.frontmatter.date} •{" "}
-              <span className="reading-time">
-                {post.node.fields.readingTime.text}
-              </span>
-            </small>
-            <p>{post.node.frontmatter.spoiler}</p>
-          </div>
-        ))}
+const centerMain = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  alignContent: "center",
+  height: "80vh",
+}
+
+const IndexPage = () => (
+  <Layout>
+    <div style={centerMain} id="home">
+      <SEO title="Home" />
+      <div id="img">
+        <img src={githubDev} alt="Developer Coding Background" width="450px" />
       </div>
-    </Layout>
-  </div>
+      <h1 id="main-title">Yash Gupta</h1>
+      <p id="main-lead">16-year-old. Web Dev. JS Enthusiast. Based in India</p>
+    </div>
+  </Layout>
 )
-
-export const pageQuery = graphql`
-  query BlogIndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          id
-          fields {
-            readingTime {
-              text
-            }
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            spoiler
-            path
-          }
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

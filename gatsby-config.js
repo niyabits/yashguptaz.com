@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Yash Gupta`,
-    description: `Personal Blog by Yash Gupta`,
+    description: `Yash Gupta. 17-year-old JavaScript enthusiast based in India.`,
     author: `@yashguptaz`,
   },
   plugins: [
@@ -9,62 +9,54 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        // In your gatsby-transformer-remark plugin array
         plugins: [
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: "gatsby-remark-emojis",
             options: {
-              maxWidth: 768,
+              // Deactivate the plugin globally (default: true)
+              active: true,
+              // Add a custom css class
+              class: "emoji-icon",
+              // Select the size (available size: 16, 24, 32, 64)
+              size: 64,
+              // Add custom styles
+              styles: {
+                display: "inline",
+                margin: "0",
+                "margin-top": "1px",
+                position: "relative",
+                top: "5px",
+                width: "25px",
+              },
             },
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              inlineCodeMarker: "÷",
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 768,
-            },
-          },
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank",
-              rel: "noopener noreferrer",
-            },
-          },
-          "gatsby-remark-copy-linked-files",
-          `gatsby-remark-reading-time`,
         ],
-      },
-    },
-
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-catch-links`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Personal Blog by Yash Gupta`,
-        short_name: `Yash Gupta`,
-        start_url: `/`,
-        background_color: `#035388`,
-        theme_color: `#323F4B`,
-        display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
   ],
 }
