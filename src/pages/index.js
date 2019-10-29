@@ -4,18 +4,9 @@ import Layout from "../components/layout"
 import githubDev from "../images/github-developer.svg"
 import SEO from "../components/seo"
 
-const centerMain = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  alignContent: "center",
-  height: "80vh",
-}
-
 const IndexPage = () => (
   <Layout>
-    <div style={centerMain} id="home">
+    <div id="home">
       <SEO title="Home" />
       <div id="img">
         <img src={githubDev} alt="Developer Coding Background" width="450px" />
