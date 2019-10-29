@@ -35,14 +35,14 @@ body {
 }
 
 #main-lead {
-  font-size: 0.95rem;
+  font-size: 16px;
   color: hsl(209, 14%, 45%);
 }
 
 #home {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
   height: 80vh;
@@ -180,7 +180,7 @@ textarea {
   }
 
   #main-lead {
-    font-size: 0.7rem;
+    font-size: 12px;
     margin-top: -30px;
   }
 
@@ -200,11 +200,11 @@ textarea {
 
   .talk-info {
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .talk-info span {
-    justify-content: start;
+    justify-content: flex-start;
     margin-bottom: -8px;
   }
 
