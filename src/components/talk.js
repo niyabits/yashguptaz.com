@@ -1,12 +1,13 @@
 import React from "react"
-import locn from "../images/icons/locn.svg"
-import dateIcon from "../images/icons/date.svg"
+import locn from "../../content/assets/icons/locn.svg"
+import dateIcon from "../../content/assets/icons/date.svg"
+import "../../content/assets/talks.css"
 
 const Talk = ({ conf, talkTitle, venue, date, area, website }) => {
   return (
     <div className="talk">
-      <h2>{talkTitle}</h2>
-      <h3>{conf}</h3>
+      <h2 style={{ fontSize: "1.6em" }}>{talkTitle}</h2>
+      <h3 style={{ fontSize: "1.3em" }}>{conf}</h3>
       <div className="talk-info">
         <span>
           <img src={locn} width="18px" alt="location" />
@@ -19,7 +20,12 @@ const Talk = ({ conf, talkTitle, venue, date, area, website }) => {
         <span>{area} Speaker</span>
       </div>
       <span className="website">
-        <a href={website} target="_blank" rel="noopener noreferrer">
+        <a
+          href={website}
+          className="secondary-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {website}
         </a>
       </span>
