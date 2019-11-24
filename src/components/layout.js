@@ -38,6 +38,8 @@ class Layout extends React.Component {
               Yash Gupta
             </a>
           </footer>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <NavBottom />
         </div>
       </>

@@ -8,21 +8,20 @@ const NavBottom = () => {
     <div
       style={{
         justifyContent: "space-around",
-        width: "100%",
         maxWidth: "642px",
         position: "fixed",
         bottom: 0,
-        paddingTop: "18px",
+        paddingTop: "12px",
         borderTop: "var(--navBorder)",
         boxShadow: "var(--navBtmShadow)",
       }}
       className="nav-btm bg-color"
     >
       <Link to="/">
-        <img src={blogIcon} alt="Blog" height="40px" />
+        <img src={blogIcon} alt="Blog" height="25px" />
       </Link>
       <Link to="/talks">
-        <img src={talkIcon} alt="Blog" height="40px" />
+        <img src={talkIcon} alt="Blog" height="25px" />
       </Link>
     </div>
   )

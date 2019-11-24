@@ -6,8 +6,8 @@ import "../../content/assets/talks.css"
 const Talk = ({ conf, talkTitle, venue, date, area, website }) => {
   return (
     <div className="talk">
-      <h2 style={{ fontSize: "1.6em" }}>{talkTitle}</h2>
-      <h3 style={{ fontSize: "1.3em" }}>{conf}</h3>
+      <h2 style={{ fontSize: "1.6rem" }}>{talkTitle}</h2>
+      <h3 style={{ fontSize: "1.3rem" }}>{conf}</h3>
       <div className="talk-info">
         <span>
           <img src={locn} width="18px" alt="location" />

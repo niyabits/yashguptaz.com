@@ -36,11 +36,6 @@ const Nav = () => {
     alignItems: "center",
   }
 
-  let navImgHt = {
-    height: 72,
-    width: 72,
-  }
-
   return (
     <>
       <nav style={navStyle} className="bg-color">
@@ -49,7 +44,8 @@ const Nav = () => {
             <Image
               fixed={data.logo.childImageSharp.fixed}
               alt="Yash"
-              style={navImgHt}
+              style={{ height: 72 }}
+              id="nav-img"
             />
           </Link>
 
