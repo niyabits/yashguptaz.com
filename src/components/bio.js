@@ -89,7 +89,7 @@ const Bio = () => {
           {author}
         </h1>
         <p align="center">
-          Teenager who code. <br /> 
+          Teenager who code <br /> 
           Web Dev. JS and React.<br />
           <a
             href="mailto:yashguptaofficial@gmail.com"
