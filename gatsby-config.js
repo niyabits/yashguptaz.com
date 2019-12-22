@@ -1,69 +1,92 @@
 module.exports = {
   siteMetadata: {
     title: `Yash Gupta`,
-    description: `Yash Gupta. 17-year-old JavaScript enthusiast based in India.`,
-    author: `@yashguptaz`,
+    author: `Yash Gupta`,
+    description: `A blog focused on providing deep insights to JavaScript code. A blog by Yash Gupta ( @ yashguptaz )`,
+    siteUrl: `https://yashguptaz.com/`,
+    social: {
+      twitter: `yashguptaz`,
+    },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Yash Gupta's Personal Website`,
-        short_name: `Yash`,
-        start_url: `/`,
-        background_color: `#3f3d56`,
-        theme_color: `#6c63ff`,
-        display: `standalone`,
-        icon: `src/images/icon2.png`, // This path is relative to the root of the site.
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        // In your gatsby-transformer-remark plugin array
         plugins: [
           {
-            resolve: "gatsby-remark-emojis",
+            resolve: `gatsby-remark-images`,
             options: {
-              // Deactivate the plugin globally (default: true)
-              active: true,
-              // Add a custom css class
-              class: "emoji-icon",
-              // Select the size (available size: 16, 24, 32, 64)
-              size: 64,
-              // Add custom styles
-              styles: {
-                display: "inline",
-                margin: "0",
-                "margin-top": "1px",
-                position: "relative",
-                top: "5px",
-                width: "25px",
-              },
+              maxWidth: 590,
             },
           },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              inlineCodeMarker: "÷",
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-adsense`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        publisherId: `ca-pub-xxxxxxxxxx`,
+        trackingId: `UA-153215805-1`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Yash Gupta`,
+        short_name: `Yash`,
+        start_url: `/`,
+        background_color: `#3f3d56`,
+        theme_color: `#6c63ff`,
+        display: `standalone`,
+        icon: `content/assets/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    "gatsby-plugin-dark-mode",
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }

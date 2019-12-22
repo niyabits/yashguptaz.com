@@ -1,77 +1,50 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 
-import Navbar from "./navbar"
-import "./layout.css"
+import "./assets/index.css"
+import Nav from "./nav.js"
+import NavBottom from "./navBottom"
 
-import Github from "../images/social/github.svg"
-import Insta from "../images/social/insta.svg"
-import Twitter from "../images/social/twitter.svg"
+import { rhythm } from "../utils/typography"
 
-const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
-  return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Navbar />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 500,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main style={{}}>{children}</main>
-        <footer>
-          <div id="sm">
+class Layout extends React.Component {
+  render() {
+    const { children } = this.props
+    return (
+      <>
+        <Nav />
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: 642,
+            marginTop: "72px",
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <main>{children}</main>
+          <footer
+            style={{
+              marginTop: "60px",
+              marginBottom: 60,
+              color: "var(--secondaryText)",
+            }}
+          >
+            © {new Date().getFullYear()}, Made by
+            {` `}
             <a
-              href="https://github.com/yashguptaz"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://www.twitter.com/yashguptaz"
+              className="secondary-links"
             >
-              <img src={Github} alt="Github Logo" width="25px" />
+              Yash Gupta
             </a>
-            <a
-              href="https://twitter.com/yashguptaz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={Twitter} alt="Twitter Logo" width="25px" />
-            </a>
-            <a
-              href="https://instagram.com/yashguptaz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={Insta} alt="Instagram Logo" width="25px" />
-            </a>
-          </div>
-        </footer>
-      </div>
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+          </footer>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <NavBottom />
+        </div>
+      </>
+    )
+  }
 }
 
 export default Layout
