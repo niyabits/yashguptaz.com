@@ -57,8 +57,8 @@ This is because people can easily trick google having a lot of text with JavaScr
 
 Server-side rendering is best suited for parts of the application that do not require dynamic interactions.
 
-Thanks to (Sudhanshu Yadav)[https://twitter.com/_syadav]. He helped me with much of the content of the blog. Please do follow him on Twitter.
+Thanks to [Sudhanshu Yadav.](https://twitter.com/_syadav) He helped me with much of the content of the blog. Please do follow him on Twitter.
 
-If you have any opportunities for me or want to connect to me with (Twitter)[https://twitter.com/yashguptaz], I am @yashguptaz on the internet.
+If you have any opportunities for me or want to connect to me with [Twitter,](https://twitter.com/yashguptaz) I am @yashguptaz on the internet.
 
 Thanks for Reading.
