@@ -27,15 +27,12 @@ const Bio = () => {
       site {
         siteMetadata {
           author
-          social {
-            twitter
-          }
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -92,15 +89,8 @@ const Bio = () => {
           {author}
         </h1>
         <p align="center">
-          16-year-old Web Dev, JS Enthusiast.
-          <br /> Based in Lucknow, UP, India. <br />
-          <a
-            href={`https://twitter.com/${social.twitter}`}
-            className="secondary-links"
-          >
-            @yashguptaz
-          </a>{" "}
-          on the internet. <br />
+          Teenager who code. <br /> 
+          Web Dev. JS and React.<br />
           <a
             href="mailto:yashguptaofficial@gmail.com"
             className="secondary-links"
