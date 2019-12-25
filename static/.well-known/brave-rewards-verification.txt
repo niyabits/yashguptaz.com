@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: yashguptaz.com
+Token: bc8b5015a075d3ba9fa77b4062b0d95aaaeb8bff21f8bf8310d2ca5bb275d914
