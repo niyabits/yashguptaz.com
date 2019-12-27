@@ -85,12 +85,13 @@ const Bio = () => {
           margin: "0 auto",
         }}
       >
-        <h1 style={{ color: "#6c63ff", margin: "12px 0", padding: 0 }}>
+        <h1 style={{ color: "var(--theme)", margin: "12px 0", padding: 0 }}>
           {author}
         </h1>
         <p align="center">
-          Teenager who code. <br /> 
-          Web Dev. JS and React.<br />
+          Teenager who code. <br />
+          Web Dev. JS and React.
+          <br />
           <a
             href="mailto:yashguptaofficial@gmail.com"
             className="secondary-links"

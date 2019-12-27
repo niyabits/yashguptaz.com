@@ -17,16 +17,17 @@
 body {
   --bg: white;
   --textNormal: hsl(0, 0%, 30%);
-  --secondaryText: hsl(0, 0%, 10%);
-  --secondaryLinks: hsl(243, 80%, 40%);
+  --secondaryText: hsl(0, 0%, 30%);
 
   --navShadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
   --navBorder: none;
   --navBtmShadow: 0 -2px 8px 0 hsla(0, 0%, 30%, 0.05);
   --navLink: hsl(243, 15%, 45%);
 
-  --h1: hsl(0, 0%, 0%);
+  --h1: hsl(0, 0%, 15%);
   --h: hsl(0, 0%, 20%);
+  /* --theme: hsl(243, 100%, 69%); */
+  --theme: hsl(217, 89%, 61%);
 
   background-color: var(--bg);
   transition: 0.2s ease-out;
@@ -38,14 +39,14 @@ body.dark {
 
   --bg: #282c35;
   --textNormal: hsl(0, 0%, 70%);
-  --secondaryText: hsl(0, 0%, 90%);
+  --secondaryText: hsl(0, 0%, 70%);
   --secondaryLinks: hsl(243, 100%, 80%);
 
   --navShadow: none;
   --navBorder: 0.1px solid hsl(0, 0%, 22%);
   --navLink: hsl(243, 15%, 75%);
 
-  --h1: hsl(0, 0%, 100%);
+  --h1: hsl(0, 0%, 85%);
   --h: hsl(0, 0%, 80%);
 
   transition: 0.2s ease-out;
@@ -57,12 +58,12 @@ body.dark {
 }
 
 a {
-  color: hsl(243, 100%, 69%);
+  color: var(--theme);
   text-decoration: none;
 }
 
 .secondary-links {
-  color: var(--secondaryLinks);
+  color: var(--theme);
 }
 
 img {
@@ -78,7 +79,7 @@ img {
 }
 
 .nav-links a:hover {
-  color: hsl(243, 100%, 69%);
+  color: var(--theme);
 }
 
 .nav-btm {
@@ -136,7 +137,7 @@ nav img {
 }
 
 #themeBtn input:checked + label {
-  background: #6c63ff;
+  background: var(--theme);
 }
 
 #themeBtn input:checked + label:after {

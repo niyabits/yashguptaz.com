@@ -31,7 +31,12 @@ class BlogIndex extends React.Component {
                       {title}
                     </Link>
                   </h2>
-                  <small style={{ color: "var(--secondaryText)" }}>
+                  <small
+                    style={{
+                      color: "var(--secondaryText)",
+                      fontSize: "0.9rem",
+                    }}
+                  >
                     {node.frontmatter.date}
                   </small>
                 </header>

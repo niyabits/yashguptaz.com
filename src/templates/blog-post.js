@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import "./content.css"
 
-import Bio from "../components/bio"
+import PostBio from "../components/post-bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
             }}
           />
           <footer>
-            <Bio />
+            <PostBio />
           </footer>
         </article>
 

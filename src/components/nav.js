@@ -7,7 +7,7 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 const Nav = () => {
   const data = useStaticQuery(graphql`
     query NavQuery {
-      logo: file(absolutePath: { regex: "/nav-icon.png/" }) {
+      logo: file(absolutePath: { regex: "/new-nav-icon.png/" }) {
         childImageSharp {
           fixed(width: 150, height: 150) {
             ...GatsbyImageSharpFixed
@@ -24,11 +24,11 @@ const Nav = () => {
     width: "100%",
     zIndex: "99",
     top: 0,
-    borderTop: "4px solid hsl(243, 100%, 70%)",
+    borderTop: "4px solid var(--theme)",
   }
 
   const navCont = {
-    maxWidth: "650px",
+    maxWidth: "750px",
     margin: "auto",
     padding: "0 24px",
     display: "flex",

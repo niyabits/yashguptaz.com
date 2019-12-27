@@ -11,7 +11,7 @@ const talks = () => {
         <div style={{ maxWidth: 500 }}>
           <SEO title="Talks" />
           <div id="talk-container">
-            <h1 style={{ color: "rgb(108, 99, 255)" }}>Talks</h1>
+            <h1 style={{ color: "var(--theme)" }}>Talks</h1>
             <Talk
               conf="React India 2019"
               talkTitle="React for Teenagers."

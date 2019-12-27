@@ -2,11 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Yash Gupta`,
     author: `Yash Gupta`,
-    description: `A blog focused on providing deep insights to JavaScript code. A blog by Yash Gupta ( @ yashguptaz )`,
+    description: `Yash Gupta 's Personal Blog. Yash Gupta is a front-end web developer who provides deep insight in to technologies like React and JavaScript. Join Yash Gupta in the journey of becoming a better web developer. Yash Gupta is interested in giving talks and opensource. Follow Yash Gupta on Twitter ( @ yashguptaz ). Yash Gupta is @yashguptaz on the internet. Yash Gupta is someone you should definitely follow.`,
     siteUrl: `https://yashguptaz.com/`,
     social: {
       twitter: `yashguptaz`,
     },
+    keywords: `Yash Gupta, Yash, Gupta, Yash Gupta Blog, Blog, Web Development, Web, React, JavaScript, React.js, front-end web developement, front-end, personal blog`,
   },
   plugins: [
     {
@@ -68,7 +69,7 @@ module.exports = {
         background_color: `#3f3d56`,
         theme_color: `#6c63ff`,
         display: `standalone`,
-        icon: `content/assets/icon.png`,
+        icon: `content/assets/new-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -85,6 +86,64 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+                  edges {
+                    node {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        title
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Yash Gupta | Personal Blog's RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+          },
+        ],
       },
     },
     `gatsby-plugin-sitemap`,
