@@ -9,7 +9,7 @@ const Nav = () => {
     query NavQuery {
       logo: file(absolutePath: { regex: "/new-nav-icon.png/" }) {
         childImageSharp {
-          fixed(width: 150, height: 150) {
+          fixed(width: 100, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -40,11 +40,11 @@ const Nav = () => {
     <>
       <nav style={navStyle} className="bg-color">
         <div style={navCont}>
-          <Link to="/">
+          <Link to="/" style={{ height: 64 }}>
             <Image
               fixed={data.logo.childImageSharp.fixed}
               alt="Yash"
-              style={{ height: 72 }}
+              style={{ height: 64, width: 64 }}
               id="nav-img"
             />
           </Link>

@@ -18,6 +18,7 @@ body {
   --bg: white;
   --textNormal: hsl(0, 0%, 30%);
   --secondaryText: hsl(0, 0%, 30%);
+  --secondaryLinks: hsl(217, 89%, 52%);
 
   --navShadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
   --navBorder: none;
@@ -40,7 +41,7 @@ body.dark {
   --bg: #282c35;
   --textNormal: hsl(0, 0%, 70%);
   --secondaryText: hsl(0, 0%, 70%);
-  --secondaryLinks: hsl(243, 100%, 80%);
+  --secondaryLinks: hsl(217, 89%, 61%);
 
   --navShadow: none;
   --navBorder: 0.1px solid hsl(0, 0%, 22%);
@@ -63,7 +64,7 @@ a {
 }
 
 .secondary-links {
-  color: var(--theme);
+  color: var(--secondaryLinks);
 }
 
 img {
@@ -73,7 +74,7 @@ img {
 /* Navbar */
 .nav-links a {
   margin-left: 48px;
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: 500;
   color: var(--navLink);
 }
@@ -87,8 +88,8 @@ img {
 }
 
 nav img {
-  height: 72px !important;
-  width: 72px !important;
+  height: 64px !important;
+  width: 64px !important;
 }
 
 .nav-btm a {
@@ -102,11 +103,13 @@ nav img {
 #themeBtn {
   height: 0;
   width: 0;
+  position: relative;
+  top: 12px;
 }
 
 #themeBtn input[type="checkbox"] {
   position: relative;
-  height: 0;
+  height: 12px;
   width: 0;
   visibility: hidden;
 }
@@ -114,23 +117,23 @@ nav img {
 #themeBtn label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 52px;
-  height: 27px;
+  width: 36px;
+  height: 20px;
   background: hsl(0, 0%, 75%);
   display: block;
   border-radius: 100px;
   position: relative;
-  bottom: 32px;
+  bottom: 40px;
   right: 42px;
 }
 
 #themeBtn label:after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
+  top: 2.4px;
+  left: 4px;
+  width: 15px;
+  height: 15px;
   background: #fff;
   border-radius: 90px;
   transition: 0.2s;
@@ -146,7 +149,7 @@ nav img {
 }
 
 #themeBtn label:active:after {
-  width: 45px;
+  width: 27px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -166,33 +169,11 @@ nav img {
 
   nav .gatsby-image-wrapper {
     height: 50px !important;
+    width: 50px;
   }
 
   nav > div > a {
     height: 50px;
-  }
-
-  /* Theme Button */
-  #themeBtn label {
-    width: 36px;
-    height: 20px;
-    bottom: 40px;
-  }
-
-  #themeBtn label:after {
-    top: 2.4px;
-    left: 4px;
-    width: 15px;
-    height: 15px;
-  }
-
-  #themeBtn input[type="checkbox"] {
-    position: relative;
-    bottom: 12px;
-  }
-
-  #themeBtn label:active:after {
-    width: 27px;
   }
 }
 

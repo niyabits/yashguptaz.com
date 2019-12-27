@@ -6,7 +6,7 @@ h5,
 h6 {
   font-family: "Tajawal", sans-serif;
   margin-bottom: 12px;
-  margin-top: 42px;
+  margin-top: 52px;
 }
 
 body {
@@ -14,7 +14,8 @@ body {
 }
 
 p {
-  line-height: 1.4em;
+  line-height: 1.6em;
+  font-size: 21px;
   color: var(--textNormal);
   transition: "color 0.2s ease-out, background 0.2s ease-out";
 }
@@ -35,4 +36,13 @@ h6 {
 
 li {
   color: var(--textNormal);
+  line-height: 1.9em;
+  font-size: 21px;
+}
+
+@media only screen and (max-width: 700px) {
+  p,
+  li {
+    font-size: 18px;
+  }
 }
