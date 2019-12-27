@@ -67,7 +67,7 @@ module.exports = {
         short_name: `Yash`,
         start_url: `/`,
         background_color: `#3f3d56`,
-        theme_color: `#6c63ff`,
+        theme_color: `#4387f4`,
         display: `standalone`,
         icon: `content/assets/new-icon.png`,
       },
