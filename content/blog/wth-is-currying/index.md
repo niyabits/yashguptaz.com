@@ -1,10 +1,8 @@
 ---
-title: What the heck is Currying? ft. JavaScript
+title: 🍛 What the heck is Currying? ft. JavaScript
 date: "2020-03-18T13:15:03.284Z"
 description: "Currying is an essential part of Functional Programming, let's see what the heck is it."
 ---
-
-# 🍛 What the heck is Currying? ft. JavaScript
 
 I know that you’re salivating, perhaps the dev world has become too delicious with JAMStack and now I’m talking about curry? So before you starve to death with these wonders of dev world let me introduce you to what currying is in general.
 
